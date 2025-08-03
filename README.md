@@ -2,6 +2,13 @@
 
 Malaria continues to cause high mortality rates, especially in less developed countries. Early and accurate diagnosis is crucial to effective treatment, but manual methods are prone to errors and resource-limited. Our project examines how computer vision, specifically convolutional neural networks (CNNs), can facilitate automated malaria detection under diverse image conditions. We are especially focused on how well AI generalizes across datasets with differing characteristics like lighting, blur, and resolution. To reflect challenges encountered in real-world microscopy settings for malaria detection, we applied data augmentation techniques such as gaussian blur, brightness shifts, pixel masking, and reduced image resolution. These changes help us test if CNNs trained on clean images can still perform under challenging conditions. 
 
+## Table of Contents
+- [Dataset](#dataset)
+- [Approach](#approach)
+- [Model Architecture](#model-architecture)
+- [Usage Guide](#usage-guide)
+- [Results](#results)
+
 ## Dataset
 We trained our model using the [Cell Images for Detecting Malaria](https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria/data) dataset on Kaggle. This dataset consists of microscopic images of blood cells categorized as **Parasitized** or **Uninfected**.
 
