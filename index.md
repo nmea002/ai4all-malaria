@@ -62,6 +62,7 @@ your-project-folder/
 5. Open and run all cells in the `analysis.ipynb` Jupyter notebook.
 
 ## Results
+
 <div markdown="1">
 
 | Test Condition        | Accuracy (%) |
