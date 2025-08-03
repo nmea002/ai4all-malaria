@@ -15,7 +15,7 @@ We trained our model using the [Cell Images for Detecting Malaria](https://www.k
 The images were originally sourced from the [NIH's malaria dataset repository](https://ceb.nlm.nih.gov/repositories/malaria-datasets/), which provides annotated data for developing machine learning models for malaria diagnosis.
 
 ## Approach
-We built a convolutional neural network (CNN) using PyTorch to classify blood cell images as either parasitized or uninfected. Training images were resized to 128×128 pixels and augmented with a 50% chance of Gaussian blur to simulate focus variability. Validation images were only resized and normalized to ensure consistent evaluation.
+We built a convolutional neural network (CNN) using PyTorch to classify blood cell images as either parasitized or uninfected. We used a single copy of the dataset and performed an 80/20 split to create training and validation sets within in the program. Training images were resized to 128×128 pixels and augmented with a 50% chance of Gaussian blur to simulate focus variability. Validation images were only resized and normalized to ensure consistent evaluation.
 
 The model was trained for 5 epochs with real-time tracking of loss and accuracy across batches. Performance was assessed on both clean and augmented validation sets to evaluate the model’s ability to generalize under varying image conditions.
 
@@ -36,7 +36,26 @@ The input images are RGB and resized to 128×128 pixels. After two rounds of con
 ```bash
 pip install torchvision
 ```
-2. Open and run all cells in the `analysis.ipynb` Jupyter notebook.
+2. Download the [Cell Images for Detecting Malaria](https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria/data) dataset from Kaggle.
+3. After extracting the dataset, if you see a nested folder structure like:
+```
+cell_images/cell_images/Parasitized
+```
+Delete the inner `cell_images` folder so that your dataset path looks like this:
+```
+cell_images/
+├── Parasitized/
+└── Uninfected/
+```
+4. Place it inside your project directory, using the following structure:
+```
+your-project-folder/
+├── cell_images/
+│   ├── Parasitized/
+│   └── Uninfected/
+├── analysis.ipynb
+```
+5. Open and run all cells in the `analysis.ipynb` Jupyter notebook.
 
 ## Results
 | Test Condition        | Accuracy (%) |
