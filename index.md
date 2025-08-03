@@ -62,6 +62,8 @@ your-project-folder/
 5. Open and run all cells in the `analysis.ipynb` Jupyter notebook.
 
 ## Results
+<div markdown="1">
+
 | Test Condition        | Accuracy (%) |
 |-----------------------|--------------|
 | No Augmentation       | 94.07        |
@@ -69,3 +71,5 @@ your-project-folder/
 | Masked Pixels         | 70.59        |
 | Low Resolution        | 93.98        |
 | Gaussian Blur         | 93.94        |
+
+</div>
