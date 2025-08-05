@@ -64,6 +64,7 @@ your-project-folder/
 ## Results
 
 <div markdown = "1">
+  
 | Test Condition          | Accuracy (%) |
 |-------------------------|--------------|
 | No Augmentation         | 93.98        |
@@ -75,4 +76,5 @@ your-project-folder/
 | Affine Shift            | 92.65        |
 | Perspective             | 92.76        |
 | Combo (Rot., Bri., Blur)| 94.43        |
+
  </div>
