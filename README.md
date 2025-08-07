@@ -15,7 +15,7 @@ We trained our model using the [Cell Images for Detecting Malaria](https://www.k
 The images were originally sourced from the [NIH's malaria dataset repository](https://ceb.nlm.nih.gov/repositories/malaria-datasets/), which provides annotated data for developing machine learning models for malaria diagnosis.
 
 ## Approach
-We built a convolutional neural network (CNN) using PyTorch to classify blood cell images as either parasitized or uninfected. We used a single copy of the dataset and performed an 80/20 split to create training and validation sets within in the program. Training and validations were resized to 128×128 pixels because it's close to the average size of the images. 
+We built a convolutional neural network (CNN) using PyTorch to classify blood cell images as either parasitized or uninfected. We used a single copy of the dataset and performed an 80/20 split to create training and validation sets within the program. Training and validations were resized to 128×128 pixels because it's close to the average size of the images. 
 
 The model was trained for 5 epochs with real-time tracking of loss and accuracy across batches. Performance was assessed on both clean and augmented validation sets to evaluate the model’s ability to generalize under varying image conditions.
 
@@ -24,7 +24,7 @@ Our convolutional neural network (CNN) consists of two convolutional layers foll
 - Conv Layer 1: 12 kernels of size 5×5 with ReLU activation
 - Max Pooling: 2×2 to reduce dimensions
 - Conv Layer 2: 24 kernels of size 5×5 with ReLU activation
-- Max Pooling: 2×2 again to reduce dimensions of feature maps
+- Max Pooling: 2×2 again to reduce the dimensions of feature maps
 - Flatten: Feature maps are flattened into a single vector
 - Fully Connected Layer 1: 128 hidden units with ReLU
 - Fully Connected Layer 2: Outputs 2 classes — Parasitized or Uninfected
